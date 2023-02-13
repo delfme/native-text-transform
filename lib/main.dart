@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Platform View Loading issue'),
+        title: const Text('Native Text Transform issue'),
       ),
       body:  Column(
       mainAxisAlignment: MainAxisAlignment.end,
