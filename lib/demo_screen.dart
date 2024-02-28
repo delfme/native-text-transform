@@ -23,25 +23,44 @@ class _DemoScreenState extends State<DemoScreen> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Chat screen'),
+        title: const Text('Demo screen'),
       ),
       body: SafeArea(
         child: Column(
           children: [
 
            const Spacer(),
-            Center(
-              child:Container(
+        Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Flutter text
+              Container(
+                padding: EdgeInsets.all(20),
+                color: Colors.grey,
+                child: const Text(
+                  'Flutter Text 👍👍👍👍 👍👍👍👍 ',
+                  style: TextStyle(
+                      fontSize: 17
+                  ),
+                ),
+              ),
+              // Native text
+              Container(
                 padding: EdgeInsets.all(20),
                 color: Colors.grey,
                 child: const NativeLabel(
-                  'Sampel Text 👍👍👍👍 👍👍👍👍 ',
+                  'Native Text 👍👍👍👍 👍👍👍👍 ',
+                  style: TextStyle(
+                      fontSize: 17
+                  ),
                 ),
               ),
-            ),
-          Center(
+
+            ]),
+            SizedBox(height: 200),
+            Center(
                child:ElevatedButton(
-                  child: Text('Rotate'),
+                  child: Text('Tap me'),
                   onPressed: () {
                     FocusScope.of(context).unfocus();
                        Navigator.of(context).push(
@@ -54,6 +73,7 @@ class _DemoScreenState extends State<DemoScreen> with TickerProviderStateMixin {
                   },
                 ),
             ),
+            SizedBox(height: 50),
           ],
         ),
       ),
