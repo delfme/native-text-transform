@@ -10,7 +10,7 @@ class DemoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cube Transition'),
+        title: Text('Demo screen'),
       ),
       body: Center(
         
